@@ -1,0 +1,17 @@
+:root {
+    --main_color: #333333;
+    --main_bg_color: #EEEEEE;
+    --secondary_bg_color: #EGEGEG;
+    --font_main: 'Alegreya', serif;
+    color: var(--main_color);
+
+}
+
+body { background-color: var(--main_bg_color); font-family: var(--font_main); max-width: 100%; margin: 10px; overflow-x: hidden;}
+
+
+.container { display: flex; width: 100%; }
+.container > div  { background-color: var(--secondary_bg_color); box-shadow: 0 0 5px 1px rgba(0,0,0,0.3); border: 1px solid var(--main_color); border-radius: 3px; width: 50%; margin: 5px; min-height: 50vh; padding: 30px; }
+
+#fade.faded { opacity: 0; }
+#fade { opacity: 1; transition: opacity ease-in 900ms; }
