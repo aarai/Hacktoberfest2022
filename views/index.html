@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css"></link>
   <script src="/js/htmx.min.js"></script>
+  <script src="https://unpkg.com/htmx.org/dist/ext/class-tools.js"></script>
 </head>
 
 <body id="body">
@@ -22,8 +23,8 @@
       </button>
       <p id="content"></p>
     </div>
-    <div>
-      <div id="fade" classes="toggle faded:1s">I'm Fading!</div>
+    <div hx-ext="class-tools">
+      <div class="fade" classes="toggle faded:1s">I'm Fading!</div>
     </div>
 
   </div>
