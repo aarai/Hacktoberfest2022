@@ -13,5 +13,5 @@ body { background-color: var(--main_bg_color); font-family: var(--font_main); ma
 .container { display: flex; width: 100%; }
 .container > div  { background-color: var(--secondary_bg_color); box-shadow: 0 0 5px 1px rgba(0,0,0,0.3); border: 1px solid var(--main_color); border-radius: 3px; width: 50%; margin: 5px; min-height: 50vh; padding: 30px; }
 
-#fade.faded { opacity: 0; }
-#fade { opacity: 1; transition: opacity ease-in 900ms; }
+.fade { opacity: 1; transition: opacity ease-in 900ms; }
+.fade.faded { opacity: 0.3; }
