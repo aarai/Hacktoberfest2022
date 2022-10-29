@@ -10,6 +10,9 @@ app.use(express.static('public'))
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, `${viewsDir}/index.html`));
 });
+app.get('/contact', function (req, res) {
+  res.sendFile(path.join(__dirname, `${viewsDir}/contact.html`));
+});
 
 app.get('/names', function (req, res) {
   res.send(`<ul><li>Fred</li><li>Bill</li><li>Ted</li></ul>`);
