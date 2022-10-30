@@ -1,0 +1,9 @@
+@import '_variables.scss';
+
+body { background: $mainbgcolor; font-family: $fontmain; max-width: 100%; margin: 10px; overflow-x: hidden; }
+
+.container { display: flex; width: 100%; }
+.container > div  { background-color: $secondarybgcolor; box-shadow: 0 0 5px 1px rgba(0,0,0,0.3); border: 1px solid $maincolor; border-radius: 3px; width: 50%; margin: 5px; min-height: 50vh; padding: 30px; }
+
+.fade { opacity: 1; transition: opacity ease-in 900ms; }
+.fade.faded { opacity: 0.3; }
