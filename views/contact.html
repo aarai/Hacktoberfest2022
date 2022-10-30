@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Contact</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
@@ -15,20 +15,28 @@
 </head>
 
 <body id="body">
-  <nav>
-    <a href="/contact">Contact</a>
-  </nav>
-  <div class="container">
-    <div id="getList">
-      <button hx-get="/names" hx-swap="innerHTML" hx-target="#content">
-        List of Opponents
-      </button>
-      <p id="content"></p>
-    </div>
-    <div hx-ext="class-tools">
-      <div class="fade" classes="toggle faded:1s">I'm Fading!</div>
-    </div>
 
+  <div class="container">
+    <div>
+      <h1>Contact</h1>
+    </div>
+    <div>
+      <form hx-post="/contact" onsubmit="event.preventDefault();">
+        <div hx-target="this" hx-swap="outerHTML">
+          <label>Email Address</label>
+          <input name="email" hx-post="/contact" hx-indicator="#ind">
+        </div>
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" class="form-control" name="firstName">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" class="form-control" name="lastName">
+        </div>
+        <button class="btn btn-default">Submit</button>
+      </form>
+    </div>
   </div>
 </body>
 
